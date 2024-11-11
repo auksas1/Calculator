@@ -93,3 +93,29 @@ function calculatePowerResult() {
     updateScreen();
   }
 }
+
+function calculateTenthPower() {
+  if (currentInput !== '') {
+    const result = Math.pow(parseFloat(currentInput), 10);
+    currentInput = result.toString();
+    updateScreen();
+  }
+}
+
+function calculateFactorial() {
+  if (currentInput !== '') {
+    const number = parseInt(currentInput);
+
+    if (number < 0) {
+      currentInput = 'NaN';
+    } else {
+      let result = 1;
+      for (let i = 1; i <= number; i++) {
+        result *= i;
+      }
+      currentInput = result.toString();
+    }
+
+    updateScreen();
+  }
+}
